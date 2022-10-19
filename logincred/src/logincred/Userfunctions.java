@@ -68,7 +68,7 @@ public class Userfunctions {
              String a = s.nextLine();
             t=Exceptionhandling.integercheck(a);
             if(t==true) {
-            	phone=Integer.parseInt(a);
+            	phone=Long.parseLong(a);
             	break;
             }
        }
@@ -78,7 +78,7 @@ public class Userfunctions {
             String a = s.nextLine();
            t=Exceptionhandling.integercheck(a);
            if(t==true) {
-           	aadhar=Integer.parseInt(a);
+           	aadhar=Long.parseLong(a);
            	break;
            }
       }
@@ -101,7 +101,7 @@ public class Userfunctions {
 			function();
 		}
 		else {
-		v.showdetails();}
+		Userview.showdetails(v);}
 	}
      void update() {
     	 System.out.println("\n---- Edit user Information ----");
@@ -170,14 +170,9 @@ public class Userfunctions {
          for (Map.Entry<String, Userdetails> individualuser : details.entrySet()) {
              System.out.print("userid"+"="+individualuser.getKey()+"\n");
              Userdetails usertemp=individualuser.getValue();
-             usertemp.showdetails();
+             Userview.showdetails(usertemp);
              }
          
      }
-	public static void main(String args[]) {
-		Userfunctions t =new Userfunctions();
-		t.function();
-
-	}
 
 }

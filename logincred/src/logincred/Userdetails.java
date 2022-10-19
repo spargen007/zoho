@@ -51,14 +51,4 @@ public class Userdetails {
 	String getcity() {
 		return city;
 	}
-	
-    void showdetails() {
-        System.out.println("\n-----//-----//-----\n");
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Gender: " + gender);
-        System.out.println("Phone number:  " + phone);
-        System.out.println("Aadhar number: " + aadhar);
-        System.out.println("cityname:"+city+"\n");
-    }
 }

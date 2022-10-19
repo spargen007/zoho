@@ -22,19 +22,4 @@ public class Loginscreen{
 		
 		}
 	}
-	public static void main(String args[]) {
-//		Scanner s=new Scanner(System.in);
-//		String u,p;
-//		System.out.println("             **************welcome to user portal**************\n");
-//		System.out.print("             userid:");
-//		u=s.next();
-//		System.out.println();
-//		System.out.print("             password:");
-//		p=s.next();
-//		String temp=Register.m.get(u);
-//		System.out.println(temp);
-//	}
-		new Loginscreen();
-
-}
 }

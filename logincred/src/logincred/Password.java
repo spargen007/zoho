@@ -106,11 +106,5 @@ public static boolean is_Numeric(char ch) {
 
     return (ch >= '0' && ch <= '9');
 }
-
-
-public static void main(String[] args) {
-	new Password();
-
-    }
 }
    

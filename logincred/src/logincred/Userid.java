@@ -43,9 +43,5 @@ public class Userid {
     public static String getuser() {
     	return v;
     }
-	public static void main(String args[]) {
-
-		new Userid();
-	}
 
 }
