@@ -41,28 +41,54 @@ public class Userfunctions {
 		
 	}
 	 public void details() {
-		System.out.println("\n---- Enter User Information ----");
-      
+		 boolean t=false;
+		System.out.println("\n---- Enter User Information ----\n");
+		s.nextLine();
+   while(true) {
         System.out.print("Name: ");
-        s.nextLine();
         name = s.nextLine();
-
+        t=Exceptionhandling.stringcheck(name);
+        if(t==true)
+        	break;
+   }
+   while(true) {
         System.out.print("Age: ");
-        age = s.nextInt();
-
+        String a = s.nextLine();
+        t=Exceptionhandling.integercheck(a);
+        if(t==true) {
+        	age=Integer.parseInt(a);
+        	break;
+        }
+   }
+   
         System.out.print("Gender(Male/Female): ");
-        s.nextLine();
         gender = s.nextLine();
-
-        System.out.print("Phone number: ");
-        phone = s.nextLong();
-
-        System.out.print("Aadhar number: ");
-        aadhar = s.nextLong();
-        
-        System.out.print("City Name: ");
-        s.nextLine();
-        city = s.nextLine();
+        while(true) {
+        	 System.out.print("Phone number: ");
+             String a = s.nextLine();
+            t=Exceptionhandling.integercheck(a);
+            if(t==true) {
+            	phone=Integer.parseInt(a);
+            	break;
+            }
+       }
+       
+        while(true) {
+        	System.out.print("Aadhar number: ");
+            String a = s.nextLine();
+           t=Exceptionhandling.integercheck(a);
+           if(t==true) {
+           	aadhar=Integer.parseInt(a);
+           	break;
+           }
+      }
+        while(true) {
+            System.out.print("City Name: ");
+            city = s.nextLine();
+            t=Exceptionhandling.stringcheck(city);
+            if(t==true)
+            	break;
+       }
         
         user = new Userdetails(name, age, gender, phone, aadhar,city);
         System.out.println("\n-----///----- details added!!! -----///-----");
@@ -87,20 +113,21 @@ public class Userfunctions {
            System.out.println("    ** Enter 6 to edit city name");
            System.out.print("Enter Choice : ");
            int n = s.nextInt();
-           Userdetails userdetails = new Userdetails();
            if (n == 1) {
                System.out.println("\nenter a name ");
                s.nextLine();
                String vi=s.nextLine();
+               while(Exceptionhandling.stringcheck(vi)==false) {
+               System.out.println("enter again\n");
+               vi=s.nextLine();
+               }
 			   user.setname(vi);
-			   name=user.getname();
 			   System.out.println("\nupdated sucessfully\n");
 			   function();
            } else if (n == 2) {
         	   System.out.println("\nenter a age ");
                int vi=s.nextInt();
 			   user.setage(vi);
-			   age=user.getage();
 			   System.out.println("\nupdated sucessfully\n");
 			   function();
            }  else if (n == 3) {
@@ -108,29 +135,29 @@ public class Userfunctions {
         	   s.nextLine();
                String vi=s.nextLine();
 			   user.setgender(vi);
-			   gender=user.getgender();
 			   System.out.println("\nupdated sucessfully\n");
 			   function();
            }else if (n == 4) {
         	   System.out.println("\nenter a phone number ");
                long vi=s.nextLong();
 			   user.setphone(vi);
-			   phone=user.getphone();
 			   System.out.println("\nupdated sucessfully\n");
 			   function();
            }else if (n == 5) {
         	   System.out.println("\nenter a aadhar number ");
                long vi=s.nextLong();
 			   user.setaadhar(vi);
-			   aadhar=user.getaadhar();
 			   System.out.println("\nupdated sucessfully\n");
 			   function();
            }  else if (n == 6) {
         	   System.out.println("\nenter a city name ");
         	   s.nextLine();
                String vi=s.nextLine();
+               while(Exceptionhandling.stringcheck(vi)==false) {
+                   System.out.println("enter again\n");
+                   vi=s.nextLine();
+                   }
 			   user.setcity(vi);
-			   city=user.getcity();
 			   System.out.println("\nupdated sucessfully\n");
 			   function();
            }else {

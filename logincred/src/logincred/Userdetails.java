@@ -7,9 +7,6 @@ public class Userdetails {
 	private long phone;
 	private long aadhar;
 	private String city;
-	Userdetails(){
-		
-	}
 	public Userdetails(String name,int age,String gender,long phone,long aadhar,String city) {
 		this.name=name;
 		this.age=age;
@@ -64,7 +61,4 @@ public class Userdetails {
         System.out.println("Aadhar number: " + aadhar);
         System.out.println("cityname:"+city+"\n");
     }
-//    String usertostr() {
-//        return  name + "\r\n" + age + "\r\n" + gender + "\r\n" + phone + "\r\n" + aadhar;
-//    }
 }
