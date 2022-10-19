@@ -2,7 +2,7 @@ package logincred;
 
 public class Exceptionhandling {
 	public static  boolean stringcheck(String s) {
-		if(s!=null && s.matches("^[a-zA-z ]*$")){
+		if(s!=null && s!="" && s.matches("^[a-zA-z ]*$")){
 		return true;	
 		}
 		else {
@@ -11,7 +11,7 @@ public class Exceptionhandling {
 		}
 	}
 public static boolean integercheck(String s) {	
-	if(s!=null && s.matches("^[0-9]*$")){
+	if(s!=null && s!="" && s.matches("^[0-9]*$")){
 	return true;	
 	}
 	else {

@@ -47,15 +47,13 @@ public class Userfunctions {
    while(true) {
         System.out.print("Name: ");
         name = s.nextLine();
-        t=Exceptionhandling.stringcheck(name);
-        if(t==true)
+        if(Exceptionhandling.stringcheck(name))
         	break;
    }
    while(true) {
         System.out.print("Age: ");
         String a = s.nextLine();
-        t=Exceptionhandling.integercheck(a);
-        if(t==true) {
+        if(Exceptionhandling.integercheck(a)) {
         	age=Integer.parseInt(a);
         	break;
         }
@@ -63,11 +61,11 @@ public class Userfunctions {
    
         System.out.print("Gender(Male/Female): ");
         gender = s.nextLine();
+        
         while(true) {
         	 System.out.print("Phone number: ");
              String a = s.nextLine();
-            t=Exceptionhandling.integercheck(a);
-            if(t==true) {
+            if(Exceptionhandling.integercheck(a)) {
             	phone=Long.parseLong(a);
             	break;
             }
@@ -76,22 +74,23 @@ public class Userfunctions {
         while(true) {
         	System.out.print("Aadhar number: ");
             String a = s.nextLine();
-           t=Exceptionhandling.integercheck(a);
-           if(t==true) {
+           if(Exceptionhandling.integercheck(a)) {
            	aadhar=Long.parseLong(a);
            	break;
            }
       }
+        
         while(true) {
             System.out.print("City Name: ");
             city = s.nextLine();
-            t=Exceptionhandling.stringcheck(city);
-            if(t==true)
+            if(Exceptionhandling.stringcheck(city))
             	break;
        }
         
         user = new Userdetails(name, age, gender, phone, aadhar,city);
+        
         System.out.println("\n-----///----- details added!!! -----///-----");
+        
         details.put(Loginscreen.loginuserid,user);
 	}
      void viewdetails() {
