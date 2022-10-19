@@ -19,10 +19,5 @@ public static boolean integercheck(String s) {
 	return false;
 	}
 }
-	public static void main(String args[]) {
-		String s="";
-		boolean t=integercheck(s);
-		System.out.println(t);
-	}
 
 }
