@@ -33,7 +33,7 @@ public class Userfunctions {
             allusers();
             function();
         }else if (n == 5) {
-            new Main();
+            Main.real();
         } else {
             System.out.println("Invalid Choice !\nEnter correct option");
             function();

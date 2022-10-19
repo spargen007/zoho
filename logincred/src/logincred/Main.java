@@ -1,9 +1,6 @@
 package logincred;
 import java.util.*;
 public class Main {
-	Main(){
-		real();
-	}
 	static Scanner s=new Scanner(System.in);
 	static void real(){
 		System.out.println("\n-----user-details-management-----\n");
