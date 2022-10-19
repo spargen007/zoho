@@ -1,15 +1,15 @@
 package logincred;
 import java.util.*;
 public class Userfunctions {
-	static String name;
-	static int age;
-	static String gender;
-	static long phone;
-	static long aadhar;
-	static String city;
+	 String name;
+	 int age;
+	 String gender;
+	 long phone;
+     long aadhar;
+     String city;
     Userdetails user;
-	static HashMap<String,Userdetails> details =new HashMap<String, Userdetails>();
-	static Scanner s= new Scanner(System.in);
+    HashMap<String,Userdetails> details =new HashMap<String, Userdetails>();
+    Scanner s= new Scanner(System.in);
 	public void function() {
 		System.out.println("\n-----welcome to user function portal-----\n");
         System.out.println("    ** Enter 1 to enter details");
@@ -41,7 +41,6 @@ public class Userfunctions {
 		
 	}
 	 public void details() {
-		 boolean t=false;
 		System.out.println("\n---- Enter User Information ----\n");
 		s.nextLine();
    while(true) {
