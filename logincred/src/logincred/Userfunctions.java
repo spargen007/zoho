@@ -92,7 +92,7 @@ public class Userfunctions {
         
         details.put(Loginscreen.loginuserid,user);
 	}
-     void viewdetails() {
+    public  void viewdetails() {
 		Userdetails v=details.get(Loginscreen.loginuserid);
 		if(v==null) {
 			System.out.println("\nfirst enter details correctly to display!");
@@ -101,7 +101,7 @@ public class Userfunctions {
 		else {
 		Userview.showdetails(v);}
 	}
-     void update() {
+     public void  update() {
     	 System.out.println("\n---- Edit user Information ----");
     	   System.out.println("    ** Enter 1 to edit name");
            System.out.println("    ** Enter 2 to edit age ");
@@ -164,7 +164,7 @@ public class Userfunctions {
            }
            details.put(Loginscreen.loginuserid,user);
      }
-     void allusers() {
+    public void allusers() {
          for (Map.Entry<String, Userdetails> individualuser : details.entrySet()) {
              System.out.print("userid"+"="+individualuser.getKey()+"\n");
              Userdetails usertemp=individualuser.getValue();

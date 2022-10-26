@@ -2,7 +2,7 @@ package logincred;
 import java.util.*;
 public class Main {
 	static Scanner v=new Scanner(System.in);
-	static void real(){
+	protected static void real(){
 		System.out.println("\n-----user-details-management-----\n");
         System.out.println("    *** Enter 1 for Login");
         System.out.println("    *** Enter 2 for register");
