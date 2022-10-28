@@ -1,6 +1,7 @@
 package logincred;
 import java.util.*;
 public class Userfunctions {
+	int n;
 	 String name;
 	 int age;
 	 String gender;
@@ -8,7 +9,7 @@ public class Userfunctions {
      long aadhar;
      String city;
     Userdetails user;
-    HashMap<String,Userdetails> details =new HashMap<String, Userdetails>();
+    static HashMap<String,Userdetails> details =new HashMap<String, Userdetails>();
     Scanner s= new Scanner(System.in);
 	public void function() {
 		System.out.println("\n-----welcome to user function portal-----\n");
@@ -18,8 +19,8 @@ public class Userfunctions {
         System.out.println("    ** Enter 4 to print all users details");
         System.out.println("    ** Enter 5 to go to main page");
         System.out.print("Enter Choice : ");
-        
-        int n = s.nextInt();
+        try {
+        n = s.nextInt();
         if (n == 1) {
             details();
             function();
@@ -36,11 +37,17 @@ public class Userfunctions {
             Main.real();
         } else {
             System.out.println("Invalid Choice !\nEnter correct option");
-            function();
+            //function();
         }
-		
+	  }
+    catch(Exception e) {
+    	System.out.println("\nenter correct option\n");
+        s.nextLine();
+    	function();
+    }
 	}
 	 public void details() {
+		user=details.get(Loginscreen.loginuserid);
 		System.out.println("\n---- Enter User Information ----\n");
 		s.nextLine();
    while(true) {
@@ -102,6 +109,7 @@ public class Userfunctions {
 		Userview.showdetails(v);}
 	}
      public void  update() {
+     user=details.get(Loginscreen.loginuserid);
     	 System.out.println("\n---- Edit user Information ----");
     	   System.out.println("    ** Enter 1 to edit name");
            System.out.println("    ** Enter 2 to edit age ");
@@ -172,5 +180,4 @@ public class Userfunctions {
              }
          
      }
-
 }

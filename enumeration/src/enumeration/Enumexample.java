@@ -1,5 +1,4 @@
 package enumeration;
-
 import java.util.*;
 
 enum Suit {

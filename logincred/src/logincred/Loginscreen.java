@@ -1,6 +1,7 @@
 package logincred;
 import java.util.*;
 public class Loginscreen{
+	Userfunctions u = new Userfunctions();
 	static String loginuserid;
 	String loginpassword;
 	Loginscreen(){
@@ -13,7 +14,7 @@ public class Loginscreen{
 		loginpassword=s.next();
 		String temp=Register.m.get(loginuserid);
 		if(loginpassword.equals(temp)) {
-			Userfunctions u = new Userfunctions();
+		
 			u.function();
 		
 		}
